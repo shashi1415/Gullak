@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to mint green → sky blue theme for Gullak */
+  --background: rgb(247, 247, 252);
+  --foreground: rgb(19, 18, 26);
+  --card: rgb(255, 255, 255);
+  --card-foreground: rgb(20, 18, 26);
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: oklch(0.2 0.01 240);
+  --primary: rgb(93, 77, 189);
+  --primary-foreground: rgb(247, 248, 252);
+  --secondary: rgb(-66, 166, 199);
+  --secondary-foreground: oklch(0.99 0.005 180);
+  --muted: oklch(0.96 0.005 180);
+  --muted-foreground: oklch(0.5 0.01 240);
+  --accent: rgb(-90, -68, 173);
+  --accent-foreground: oklch(0.99 0.005 180);
+  --destructive: rgb(33, -26, 232);
+  --destructive-foreground: rgb(249, 247, 252);
+  --border: rgb(227, 227, 232);
+  --input: rgb(228, 227, 232);
+  --ring: rgb(78, 77, 189);
+  --chart-1: rgb(115, 77, 189);
+  --chart-2: rgb(-66, -36, 199);
+  --chart-3: rgb(-60, -90, 173);
+  --chart-4: rgb(148, 135, 201);
+  --chart-5: rgb(-13, -48, 156);
+  --radius: 1rem;
+  --sidebar: rgb(249, 247, 252);
+  --sidebar-foreground: rgb(20, 18, 26);
+  --sidebar-primary: rgb(77, 87, 189);
+  --sidebar-primary-foreground: rgb(248, 247, 252);
+  --sidebar-accent: rgb(238, 237, 242);
+  --sidebar-accent-foreground: rgb(20, 18, 26);
+  --sidebar-border: rgb(228, 227, 232);
+  --sidebar-ring: rgb(100, 77, 189);
+}
+
+.dark {
+  /* Dark mode with mint/sky accents */
+  --background: oklch(0.15 0.01 240);
+  --foreground: oklch(0.98 0.005 180);
+  --card: oklch(0.18 0.01 240);
+  --card-foreground: oklch(0.98 0.005 180);
+  --popover: oklch(0.18 0.01 240);
+  --popover-foreground: oklch(0.98 0.005 180);
+  --primary: oklch(0.72 0.12 165);
+  --primary-foreground: oklch(0.15 0.01 240);
+  --secondary: oklch(0.68 0.14 210);
+  --secondary-foreground: oklch(0.15 0.01 240);
+  --muted: oklch(0.25 0.01 240);
+  --muted-foreground: oklch(0.65 0.005 180);
+  --accent: oklch(0.65 0.16 185);
+  --accent-foreground: oklch(0.15 0.01 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.005 180);
+  --border: oklch(0.25 0.01 240);
+  --input: oklch(0.25 0.01 240);
+  --ring: oklch(0.72 0.12 165);
+  --chart-1: oklch(0.72 0.12 165);
+  --chart-2: oklch(0.68 0.14 210);
+  --chart-3: oklch(0.65 0.16 185);
+  --chart-4: oklch(0.78 0.1 150);
+  --chart-5: oklch(0.62 0.12 195);
+  --sidebar: oklch(0.18 0.01 240);
+  --sidebar-foreground: oklch(0.98 0.005 180);
+  --sidebar-primary: oklch(0.72 0.12 165);
+  --sidebar-primary-foreground: oklch(0.15 0.01 240);
+  --sidebar-accent: oklch(0.25 0.01 240);
+  --sidebar-accent-foreground: oklch(0.98 0.005 180);
+  --sidebar-border: oklch(0.25 0.01 240);
+  --sidebar-ring: oklch(0.72 0.12 165);
+}
+
+@theme inline {
+  /* Using Inter font family */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
