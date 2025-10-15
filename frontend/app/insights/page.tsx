@@ -85,7 +85,7 @@ export default function CommunityPage() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("http://127.0.0.1:5000/groq-influencers");
+        const res = await fetch("https://gullak-orvf.onrender.com/groq-influencers");
         const data = await res.json();
         if (data.influencers) setGroqInfluencers(data.influencers);
       } catch (err) {
@@ -136,7 +136,7 @@ export default function CommunityPage() {
     try {
       const user = auth.currentUser;
       const payload = { userId: user?.uid ?? null, query: queryText };
-      const res = await fetch("http://127.0.0.1:5000/ai-advice", {
+      const res = await fetch("https://gullak-orvf.onrender.com/ai-advice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

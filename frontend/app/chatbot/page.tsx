@@ -77,7 +77,7 @@ export default function ChatbotPage() {
         user: user ? { name: user.email.split("@")[0], email: user.email } : null,
       };
 
-      const res = await fetch("http://127.0.0.1:5000/ai-advice", {
+      const res = await fetch("https://gullak-orvf.onrender.com/ai-advice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

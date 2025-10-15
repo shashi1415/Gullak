@@ -157,7 +157,7 @@ export default function InvestmentsPage() {
     setMessages([]);
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/ai-advice", {
+      const res = await fetch("https://gullak-orvf.onrender.com/ai-advice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: user.uid, query: question }),
@@ -185,7 +185,7 @@ export default function InvestmentsPage() {
     setAiLoading(true);
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/ai-advice", {
+      const res = await fetch("https://gullak-orvf.onrender.com/ai-advice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: user.uid, messages: [...messages, { role: "user", content: userMsg }] }),
