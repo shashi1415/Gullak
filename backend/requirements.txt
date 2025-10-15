@@ -5,4 +5,5 @@ transformers
 torch
 requests
 groq
+python-dotenv
 
