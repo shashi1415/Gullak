@@ -111,8 +111,8 @@ Built using **Next.js (React)**, **Tailwind CSS**, **Framer Motion**, and **Luci
 
 ### 🧩 Backend
 - **Flask (Python)**
-- **MySQL** / **SQLAlchemy ORM**
-- **JWT Authentication**
+- **Firestore**
+- **Firebase Authentication**
 - REST API for Users, Expenses, Goals, and Insights
 
 ---
